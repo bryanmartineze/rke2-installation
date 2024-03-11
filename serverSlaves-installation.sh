@@ -1,13 +1,12 @@
 #Download RKE2 installator
-curl -sfL https://get.rke2.io --output install.sh | chmod +x install.sh
+curl -sfL https://get.rke2.io --output install.sh
+chmod +x install.sh
 
-#Setup env variables
+#Setup env variables and install RKE2
 INSTALL_RKE2_TYPE=server INSTALL_RKE2_CHANNEL=v1.24 ./install.sh
 
 #Create rke2 config
 mkdir -p /etc/rancher/rke2/
-
-vi /etc/rancher/rke2/config.yaml
 
 cat > /etc/rancher/rke2/config.yaml << EOF
 server: https://cluster01.example.com:9345
