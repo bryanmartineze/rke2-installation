@@ -14,7 +14,7 @@ token: myrke2cluster01
 EOF
 
 #Enable rke2-server.service
-systemctl enable --now rke2-server.service
+systemctl enable --now rke2-agent.service
 
 #Test kubectl in any of the server nodes
 kubectl get nodes
